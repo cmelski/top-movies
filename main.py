@@ -8,11 +8,9 @@ from wtforms import StringField, SubmitField
 from wtforms.validators import DataRequired
 import requests
 import os
-#MOVIE_API_KEY="bbb1f5d533ed5fe67371fe26f6754be8"
+
 MOVIE_API_KEY=os.environ.get('MOVIE_API_KEY')
-#MOVIE_READ_ACCESS_TOKEN = "eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJiYmIxZjVkNTMzZWQ1ZmU2NzM3MWZlMjZmNjc1NGJlOCIsInN1YiI6IjY2MTRiMjA2YTZhNGMxMDE4NmJlNWMzMCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.xw96cDJqSjbYUsfkxqlrT9w6IeAQebXs5riRN1XS3hY"
 MOVIE_READ_ACCESS_TOKEN=os.environ.get('MOVIE_READ_ACCESS_TOKEN')
-#PASS = "BESTday2011"
 PASS=os.environ.get('PASS')
 '''
 Red underlines? Install the required packages first: 
@@ -28,7 +26,7 @@ This will install the packages from requirements.txt for this project.
 '''
 
 app = Flask(__name__)
-#app.config['SECRET_KEY'] = '8BYkEfBA6O6donzWlSihBXox7C0sKR6b'
+
 app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY')
 Bootstrap5(app)
 
